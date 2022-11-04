@@ -8,7 +8,11 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+<<<<<<< Updated upstream
+  - Ground
+=======
+  - ground
+>>>>>>> Stashed changes
   - Water
   - UI
   - 
