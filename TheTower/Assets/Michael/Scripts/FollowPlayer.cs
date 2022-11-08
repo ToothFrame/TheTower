@@ -5,9 +5,9 @@ using UnityEngine;
 public class FollowPlayer : MonoBehaviour
 {
     [SerializeField] public GameObject Character;
-    [SerializeField] public float Self;
-    [SerializeField] private float updateEnemy;
-    [SerializeField] public float Direction;
+    public float Self;
+    private float updateEnemy;
+    public float Direction;
 
     
 
@@ -21,7 +21,6 @@ public class FollowPlayer : MonoBehaviour
     {
         Self = this.transform.position.x;
         Self = Character.transform.position.x - Self;
-        Debug.Log(Self);
     }
 
     void EnemyMovement()
@@ -49,7 +48,7 @@ void FixedUpdate()
 
         if (updateEnemy <= 0)
         {
-            updateEnemy = 0.5f;
+            updateEnemy = 0.25f;
             EnemyMovement();
         }
         GetComponent<Rigidbody2D>().velocity = new Vector2(Direction, GetComponent<Rigidbody2D>().velocity.y);
